@@ -1,0 +1,138 @@
+.container {
+  max-width: 400px;
+  padding: 40px;
+}
+
+form {
+  padding: 20px 10px;
+}
+input.form-control {
+  height: 20px;
+  font-size: small;
+}
+
+h1 {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 70px;
+  font-size: 50px;
+  font-family: "Lato", sans-serif;
+}
+
+.country {
+  margin-left: 15px;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  font-size: large;
+  font-family: "Lato", sans-serif;
+}
+
+.theDate {
+  margin-left: 15px;
+  margin-bottom: 20px;
+  margin-top: -10px;
+  font-size: small;
+  font-family: "Lato", sans-serif;
+}
+
+ul {
+  text-align: right;
+  list-style: none;
+  font-size: xx-small;
+  margin-right: 15px;
+  margin-left: -3px;
+  position: absolute;
+  margin-top: 40px;
+}
+
+p {
+  font-size: 13px;
+  margin-top: 15px;
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  max-width: 400px;
+  padding: 40px;
+}
+
+form {
+  padding: 20px 10px;
+}
+input.form-control {
+  height: 20px;
+  font-size: small;
+}
+
+h1 {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 70px;
+  font-size: 50px;
+  font-family: "Lato", sans-serif;
+}
+
+h5 {
+  margin-left: 15px;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  font-size: small;
+  font-family: "Lato", sans-serif;
+}
+
+ul {
+  text-align: right;
+  list-style: none;
+  font-size: xx-small;
+  margin-right: 15px;
+  position: absolute;
+  top: 280px;
+  left: 207px;
+}
+
+p {
+  font-size: 13px;
+  margin-top: 15px;
+  font-family: "Lato", sans-serif;
+}
+
+.weather {
+  text-align: center;
+  font-size: large;
+  font-family: "Lato", sans-serif;
+  margin-top: -5px;
+}
+
+.col {
+  font-family: "Lato", sans-serif;
+  font-size: small;
+  text-align: center;
+  padding-bottom: -10px;
+  padding-top: 15px;
+}
+
+.fa-sun {
+  padding-top: 15px;
+}
+
+.fa-cloud-showers-heavy {
+  padding-top: 15px;
+}
+
+.fa-cloud-sun {
+  padding-top: 15px;
+}
+
+.card {
+  border: none;
+  background-image: url("imgs/background.jpg");
+}
+
+.card.forecast {
+  background: none;
+}
+
+.forecast .row {
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  background: #fbf8ec;
+}
