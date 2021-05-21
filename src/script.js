@@ -13,7 +13,7 @@ let weekDays = [
   "Wednesday",
   "Thursday",
   "Friday",
-  "Saturday"
+  "Saturday",
 ];
 let day = weekDays[now.getDay()];
 
