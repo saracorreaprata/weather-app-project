@@ -1,22 +1,14 @@
-.container {
-  max-width: 400px;
-  padding: 40px;
-}
-
-form {
-  padding: 20px 10px;
-}
-input.form-control {
-  height: 20px;
-  font-size: small;
-}
-
 h1 {
   text-align: center;
   margin: 0 auto;
   padding-top: 70px;
   font-size: 50px;
   font-family: "Lato", sans-serif;
+}
+
+.container {
+  max-width: 400px;
+  padding: 40px;
 }
 
 .country {
@@ -49,11 +41,6 @@ p {
   font-size: 13px;
   margin-top: 15px;
   font-family: "Lato", sans-serif;
-}
-
-.container {
-  max-width: 400px;
-  padding: 40px;
 }
 
 form {
