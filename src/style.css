@@ -1,6 +1,7 @@
 .container {
   max-width: 400px;
   padding: 40px;
+  background-image: url("imgs/background.jpg");
 }
 
 form {
@@ -125,7 +126,6 @@ p {
 
 .card {
   border: none;
-  background-image: url("imgs/background.jpg");
 }
 
 .card.forecast {
