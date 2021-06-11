@@ -136,3 +136,9 @@ p {
   border-top: 1px solid rgba(0, 0, 0, 0.125);
   background: #fbf8ec;
 }
+
+.description {
+  text-align: center;
+  font-size: small;
+  font-family: "Lato", sans-serif;
+}
