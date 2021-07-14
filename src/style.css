@@ -112,7 +112,7 @@ p {
 
 .card {
   border: none;
-  background-image: url("../imgs/background3.jpg");
+  background-image: url("../imgs/background.jpg");
 }
 
 .card.forecast {
