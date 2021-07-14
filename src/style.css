@@ -112,7 +112,7 @@ p {
 
 .card {
   border: none;
-  background-image: url("../imgs/background.jpg");
+  background-color: honeydew;
 }
 
 .card.forecast {
