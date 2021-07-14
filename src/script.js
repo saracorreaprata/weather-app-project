@@ -38,6 +38,7 @@ function getCurrentTemperature(response) {
   currentFeel.innerHTML = `Feels Like ${feel}ºC`;
   let currentDescription = document.querySelector("p.weather");
   currentDescription.innerHTML = `<small>${response.data.weather[0].description}</small>`;
+
 }
 function retrivePosition(position) {
   let lat = position.coords.latitude;
