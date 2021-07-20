@@ -18,30 +18,35 @@ let weekDays = [
 let day = weekDays[now.getDay()];
 
 let Data = document.querySelector("p#theDate");
-document.getElementById(
-  "dateInput"
-).innerHTML = `${day},  ${hours} : ${minutes}`;
+document.getElementById("dateInput").innerHTML = `${day},  ${hours} : ${minutes}`;
 
+function formatDay(timestamp){
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
 
 function displayForecast(response){
+  let forecast = response.data.daily;
   
   let forecastElement = document.querySelector("#forecast");
 
-  let days = ["Tue", "Wed", "Thu"];
-
   let forecastHTML = `<div class="row">`;
-  days.forEach(function(day){
+  forecast.forEach(function(forecastDay){
 
     forecastHTML = forecastHTML + 
     `
             <div class="col-2">
-              <div class="weather-forecast-date"> ${day}</div>
-              <i class="fas fa-cloud-sun fa-2x"></i>
+              <div class="weather-forecast-date"> ${formateDay(forecastDay.dt)}</div>
+              <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
+              alt=""
+              width="42"
+            />
               <div class="weather-forecast-temperature">
-                <spam class="weather-forecast-temperature-max">
-              18 </spam>
-              <spam class="weather-forecast-temperature-min">
-              12 </spam>
+                <spam class="weather-forecast-temperature-max">${forecastDay.temp.max} </spam>
+              <spam class="weather-forecast-temperature-min">${forecastDay.temp.min} </spam>
               </div>
             </div>
     `
@@ -83,8 +88,6 @@ function getCurrentTemperature(response) {
   getForecast(response.data.coord)
 
 }
-
-displayForecast();
 
 function retrivePosition(position) {
   let lat = position.coords.latitude;
