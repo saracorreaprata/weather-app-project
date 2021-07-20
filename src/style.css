@@ -90,7 +90,7 @@ p {
   margin-top: -5px;
 }
 
-.col {
+.weather-forecast {
   font-family: "Lato", sans-serif;
   font-size: small;
   text-align: center;
@@ -98,16 +98,19 @@ p {
   padding-top: 15px;
 }
 
-.fa-sun {
-  padding-top: 15px;
+.weather-forecast-date{
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
-.fa-cloud-showers-heavy {
-  padding-top: 15px;
+.weather-forecast-temperature{
+  font-size: 11px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-.fa-cloud-sun {
-  padding-top: 15px;
+.weather-forecast-temperature-min{
+  opacity: 0.5;
 }
 
 .card {
@@ -122,6 +125,7 @@ p {
 .forecast .row {
   border-top: 1px solid rgba(0, 0, 0, 0.125);
   background: #fbf8ec;
+  margin-bottom: 20px;
 }
 
 .description {
