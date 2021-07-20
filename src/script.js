@@ -23,19 +23,19 @@ document.getElementById(
 ).innerHTML = `${day},  ${hours} : ${minutes}`;
 
 
-function displayForecast(){
+function displayForecast(response){
+  
   let forecastElement = document.querySelector("#forecast");
 
-  let forecastHTML = `<div class="row">`;
   let days = ["Tue", "Wed", "Thu"];
+
+  let forecastHTML = `<div class="row">`;
   days.forEach(function(day){
 
     forecastHTML = forecastHTML + 
     `
             <div class="col-2">
-              <div class="weather-forecast-date">
-              ${day}
-              </div>
+              <div class="weather-forecast-date"> ${day}</div>
               <i class="fas fa-cloud-sun fa-2x"></i>
               <div class="weather-forecast-temperature">
                 <spam class="weather-forecast-temperature-max">
@@ -45,30 +45,42 @@ function displayForecast(){
               </div>
             </div>
     `
-
   })
 
   forecastHTML = forecastHTML + `</div>`
   forecastElement.innerHTML = forecastHTML;
+}
 
+function getForecast(coordinates){
+console.log(coordinates);
+let apiKey = "1e6fb4f833abbe200b61146f7fadcf8f";
+let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`
+axios.get(apiUrl).then(displayForecast);
 }
 
 function getCurrentTemperature(response) {
   let countries = document.querySelector("p#countries");
   countries.innerHTML = `${response.data.name}`;
+
   let currentTemperature = document.querySelector("h1");
   let temperature = Math.round(response.data.main.temp);
   currentTemperature.innerHTML = `${temperature}<small>ºC</small>`;
+
   let currentHumidity = document.querySelector("li.humidity");
   currentHumidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
+
   let currentWind = document.querySelector("li.wind");
   let wind = Math.round(response.data.wind.speed);
   currentWind.innerHTML = `Wind: ${wind}km/h`;
+
   let currentFeel = document.querySelector("li.feels");
   let feel = Math.round(response.data.main.feels_like);
   currentFeel.innerHTML = `Feels Like ${feel}ºC`;
+
   let currentDescription = document.querySelector("p.weather");
   currentDescription.innerHTML = `<small>${response.data.weather[0].description}</small>`;
+
+  getForecast(response.data.coord)
 
 }
 
