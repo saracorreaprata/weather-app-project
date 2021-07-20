@@ -22,6 +22,37 @@ document.getElementById(
   "dateInput"
 ).innerHTML = `${day},  ${hours} : ${minutes}`;
 
+
+function displayForecast(){
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Tue", "Wed", "Thu"];
+  days.forEach(function(day){
+
+    forecastHTML = forecastHTML + 
+    `
+            <div class="col-2">
+              <div class="weather-forecast-date">
+              ${day}
+              </div>
+              <i class="fas fa-cloud-sun fa-2x"></i>
+              <div class="weather-forecast-temperature">
+                <spam class="weather-forecast-temperature-max">
+              18 </spam>
+              <spam class="weather-forecast-temperature-min">
+              12 </spam>
+              </div>
+            </div>
+    `
+
+  })
+
+  forecastHTML = forecastHTML + `</div>`
+  forecastElement.innerHTML = forecastHTML;
+
+}
+
 function getCurrentTemperature(response) {
   let countries = document.querySelector("p#countries");
   countries.innerHTML = `${response.data.name}`;
@@ -40,6 +71,9 @@ function getCurrentTemperature(response) {
   currentDescription.innerHTML = `<small>${response.data.weather[0].description}</small>`;
 
 }
+
+displayForecast();
+
 function retrivePosition(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
