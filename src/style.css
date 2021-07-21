@@ -6,27 +6,6 @@ h1 {
   font-family: "Lato", sans-serif;
 }
 
-.container {
-  max-width: 400px;
-  padding: 40px;
-}
-
-.country {
-  margin-left: 15px;
-  margin-bottom: 20px;
-  margin-top: 50px;
-  font-size: large;
-  font-family: "Lato", sans-serif;
-}
-
-.theDate {
-  margin-left: 15px;
-  margin-bottom: 20px;
-  margin-top: -10px;
-  font-size: small;
-  font-family: "Lato", sans-serif;
-}
-
 ul {
   text-align: right;
   list-style: none;
@@ -35,6 +14,8 @@ ul {
   margin-left: -3px;
   position: absolute;
   margin-top: 40px;
+  top: 280px;
+  left: 207px;
 }
 
 p {
@@ -59,27 +40,23 @@ h1 {
   font-family: "Lato", sans-serif;
 }
 
-h5 {
+.container {
+  max-width: 400px;
+  padding: 40px;
+}
+
+.country {
   margin-left: 15px;
   margin-bottom: 20px;
   margin-top: 50px;
-  font-size: small;
+  font-size: large;
   font-family: "Lato", sans-serif;
 }
 
-ul {
-  text-align: right;
-  list-style: none;
-  font-size: xx-small;
-  margin-right: 15px;
-  position: absolute;
-  top: 280px;
-  left: 207px;
-}
-
-p {
-  font-size: 13px;
-  margin-top: 15px;
+.theDate {
+  margin-left: 15px;
+  margin-top: -15px;
+  font-size: 12px;
   font-family: "Lato", sans-serif;
 }
 
@@ -115,21 +92,23 @@ p {
 
 .card {
   border: none;
-  background-image: url("../imgs/background.jpg");
+  background-image: url("../imgs/background3.png");
 }
 
 .card.forecast {
-  background: none;
-}
-
-.forecast .row {
-  border-top: 1px solid rgba(0, 0, 0, 0.125);
   background: #fbf8ec;
-  margin-bottom: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  margin-left: 15 px;
+  margin-bottom: 10px;
 }
 
 .description {
   text-align: center;
   font-size: x-small;
   font-family: "Lato", sans-serif;
+  opacity: 0.8;
+}
+
+#link {
+  color:#3AA2DB;
 }
